@@ -3,6 +3,8 @@
 namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
@@ -25,7 +27,7 @@ class Attendance extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function office()
+    public function office(): BelongsTo
     {
         return $this->belongsTo(Office::class);
     }
@@ -33,7 +35,7 @@ class Attendance extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function employee()
+    public function employee(): BelongsTo
     {
         return $this->belongsTo(Employee::class);
     }
