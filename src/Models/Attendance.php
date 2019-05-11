@@ -28,7 +28,7 @@ class Attendance extends Model implements EntityContract
      */
     public function office(): BelongsTo
     {
-        return $this->belongsTo(Office::class);
+        return $this->belongsTo(config('amethyst.office.data.office.model'));
     }
 
     /**
@@ -36,6 +36,6 @@ class Attendance extends Model implements EntityContract
      */
     public function employee(): BelongsTo
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(config('amethyst.employee.data.employee.model'));
     }
 }
