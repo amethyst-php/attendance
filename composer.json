@@ -8,7 +8,8 @@
         "railken/amethyst-common": "0.1.*",
         "railken/amethyst-office": "0.1.*",
         "railken/amethyst-employee": "0.1.*",
-        "railken/amethyst-activity": "0.1.*"
+        "railken/amethyst-activity": "0.1.*",
+        "railken/amethyst-taxonomy": "0.1.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",

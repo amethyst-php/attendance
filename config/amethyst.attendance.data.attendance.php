@@ -11,4 +11,9 @@ return [
     'authorizer' => Railken\Amethyst\Authorizers\AttendanceAuthorizer::class,
     'faker'      => Railken\Amethyst\Fakers\AttendanceFaker::class,
     'manager'    => Railken\Amethyst\Managers\AttendanceManager::class,
+    'attributes' => [
+        'type' => [
+            'taxonomy' => 'attendance-type',
+        ],
+    ],
 ];

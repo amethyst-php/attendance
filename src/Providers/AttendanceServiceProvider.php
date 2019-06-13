@@ -17,7 +17,10 @@ class AttendanceServiceProvider extends CommonServiceProvider
         $this->app->register(\Railken\Amethyst\Providers\OfficeServiceProvider::class);
         $this->app->register(\Railken\Amethyst\Providers\EmployeeServiceProvider::class);
         $this->app->register(\Railken\Amethyst\Providers\ActivityServiceProvider::class);
+        $this->app->register(\Railken\Amethyst\Providers\TaxonomyServiceProvider::class);
 
-        Config::set('amethyst.activity.data.activity.attributes.activitiable.options.'.\Railken\Amethyst\Models\Attendance::class, \Railken\Amethyst\Managers\AttendanceManager::class);
+        app('amethyst.taxonomy')->add('attendance.type', Config::get('amethyst.attendance.data.attendance.attributes.type.taxonomy'), [
+            'default',
+        ]);
     }
 }

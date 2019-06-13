@@ -39,4 +39,12 @@ class Attendance extends Model implements EntityContract
     {
         return $this->belongsTo(config('amethyst.employee.data.employee.model'));
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function type(): BelongsTo
+    {
+        return $this->belongsTo(config('amethyst.taxonomy.data.taxonomy.model'));
+    }
 }
