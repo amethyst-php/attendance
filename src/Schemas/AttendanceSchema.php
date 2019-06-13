@@ -26,6 +26,8 @@ class AttendanceSchema extends Schema
                 ->setRelationName('employee')
                 ->setRelationManager(EmployeeManager::class)
                 ->setRequired(true),
+            Attributes\DateTimeAttribute::make('started_at'),
+            Attributes\DateTimeAttribute::make('ended_at'),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),

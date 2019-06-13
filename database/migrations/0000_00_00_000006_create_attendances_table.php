@@ -18,6 +18,8 @@ class CreateAttendancesTable extends Migration
             $table->foreign('office_id')->references('id')->on(Config::get('amethyst.office.data.office.table'));
             $table->integer('employee_id')->unsigned();
             $table->foreign('employee_id')->references('id')->on(Config::get('amethyst.employee.data.employee.table'));
+            $table->datetime('started_at')->nullable();
+            $table->datetime('ended_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
