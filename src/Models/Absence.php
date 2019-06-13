@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
 
-class Attendance extends Model implements EntityContract
+class Absence extends Model implements EntityContract
 {
-    use SoftDeletes;
-    use ConfigurableModel;
+    use SoftDeletes, ConfigurableModel;
 
     /**
      * Create a new Eloquent model instance.
@@ -20,7 +19,7 @@ class Attendance extends Model implements EntityContract
      */
     public function __construct(array $attributes = [])
     {
-        $this->ini('amethyst.attendance.data.attendance');
+        $this->ini('amethyst.attendance.data.absence');
         parent::__construct($attributes);
     }
 
@@ -38,5 +37,13 @@ class Attendance extends Model implements EntityContract
     public function employee(): BelongsTo
     {
         return $this->belongsTo(config('amethyst.employee.data.employee.model'));
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function type(): BelongsTo
+    {
+        return $this->belongsTo(config('amethyst.taxonomy.data.taxonomy.model'));
     }
 }

@@ -8,7 +8,7 @@ use Railken\Amethyst\Attributes as AmethystAttributes;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 
-class AttendanceSchema extends Schema
+class AbsenceSchema extends Schema
 {
     /**
      * Get all the attributes.
@@ -22,6 +22,9 @@ class AttendanceSchema extends Schema
             Attributes\BelongsToAttribute::make('office_id')
                 ->setRelationName('office')
                 ->setRelationManager(OfficeManager::class)
+                ->setRequired(true),
+            \Railken\Amethyst\Attributes\TaxonomyAttribute::make('type_id', app('amethyst.taxonomy')->get('absence.type'))
+                ->setRelationName('type')
                 ->setRequired(true),
             Attributes\BelongsToAttribute::make('employee_id')
                 ->setRelationName('employee')
