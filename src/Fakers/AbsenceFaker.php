@@ -3,9 +3,9 @@
 namespace Railken\Amethyst\Fakers;
 
 use Faker\Factory;
+use Illuminate\Support\Facades\Config;
 use Railken\Bag;
 use Railken\Lem\Faker;
-use Illuminate\Support\Facades\Config;
 
 class AbsenceFaker extends Faker
 {

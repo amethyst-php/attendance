@@ -4,7 +4,6 @@ namespace Railken\Amethyst\Schemas;
 
 use Railken\Amethyst\Managers\EmployeeManager;
 use Railken\Amethyst\Managers\OfficeManager;
-use Railken\Amethyst\Attributes as AmethystAttributes;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 
