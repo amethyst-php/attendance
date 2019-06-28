@@ -28,6 +28,8 @@ class AttendanceSchema extends Schema
                 ->setRequired(true),
             Attributes\DateTimeAttribute::make('started_at'),
             Attributes\DateTimeAttribute::make('ended_at'),
+            Attributes\NumberAttribute::make('duration')
+                ->setFillable(false),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),

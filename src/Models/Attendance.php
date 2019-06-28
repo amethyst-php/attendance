@@ -39,4 +39,17 @@ class Attendance extends Model implements EntityContract
     {
         return $this->belongsTo(config('amethyst.employee.data.employee.model'));
     }
+
+    /**
+     * @return float
+     */
+    public function getDurationAttribute(): float
+    {
+        return ($this->ended_at && $this->started_at) ? $this->ended_at->timestamp - $this->started_at->timestamp : 0;
+    }
+
+    public function toArray()
+    {
+        return array_merge(parent::toArray(), ['duration' => $this->duration]);
+    }
 }
