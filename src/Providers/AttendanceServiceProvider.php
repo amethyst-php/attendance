@@ -1,9 +1,9 @@
 <?php
 
-namespace Railken\Amethyst\Providers;
+namespace Amethyst\Providers;
 
 use Illuminate\Support\Facades\Config;
-use Railken\Amethyst\Common\CommonServiceProvider;
+use Amethyst\Common\CommonServiceProvider;
 
 class AttendanceServiceProvider extends CommonServiceProvider
 {
@@ -14,9 +14,9 @@ class AttendanceServiceProvider extends CommonServiceProvider
     {
         parent::register();
 
-        $this->app->register(\Railken\Amethyst\Providers\OfficeServiceProvider::class);
-        $this->app->register(\Railken\Amethyst\Providers\EmployeeServiceProvider::class);
-        $this->app->register(\Railken\Amethyst\Providers\ActivityServiceProvider::class);
-        $this->app->register(\Railken\Amethyst\Providers\TaxonomyServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\OfficeServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\EmployeeServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\ActivityServiceProvider::class);
+        $this->app->register(\Amethyst\Providers\TaxonomyServiceProvider::class);
     }
 }
