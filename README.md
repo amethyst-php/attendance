@@ -1,6 +1,6 @@
 # amethyst-attendance
 
-[![Build Status](https://travis-ci.org/amethyst-php/attendance.svg?branch=master)](https://travis-ci.org/amethyst-php/attendance)
+[![Action Status](https://github.com/amethyst-php/attendance/workflows/test/badge.svg)](https://github.com/amethyst-php/attendance/actions)
 
 [Amethyst](https://github.com/amethyst-php/amethyst) package.
 
